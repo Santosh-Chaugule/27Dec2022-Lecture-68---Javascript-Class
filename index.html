@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascipt Class</title>
+    <style></style>
+    <link rel="stylesheet" href="style.css" />
+    <script></script>
+  </head>
+  <body>
+    <!-- Class can contain Function -->
+
+    <script>
+      //function defination
+      //This function will not return anything.
+      function add(x, y) {
+        alert(x + y); //x and y are formal arguments
+      }
+      //function Calling/Invocation/Execution/Execute
+      add(5, 6); //Actual Arguments
+
+      //function defination
+      function multiply(a, b) {
+        //formal arguments
+        //Every Function return something
+        return a * b;
+      }
+      //function Invocation
+      let result = multiply(5, 5); //this is actual argument
+      console.log(result);
+
+      //function defination
+      function devide(x = 25, y = 5) {
+        //formal arguments with default value.
+        //3rd way the see the output
+        document.write(x / y);
+        document.write("<br/>");
+      }
+      //function Calling
+      devide(); //No actual Arguments
+      devide(50); //one actual arguments
+      devide(100, 20); //Two actual arguments
+    </script>
+
+    <script>
+      class calculator {
+        //Method defination
+        addition(x, y) {
+          //everry function return something
+          return x + y;
+        }
+        substraction(x, y) {
+          return x - y;
+        }
+        multiplication(x, y) {
+          return x * y;
+        }
+        division(x, y) {
+          return x / y;
+        }
+      }
+      ///I order to call the methods of class you need to create the class object
+
+      //let Object=new ClassName();
+
+      let myObject = new calculator();
+      let result1 = myObject.addition(1, 2);
+      console.log(result1);
+
+      let result3 = myObject.substraction(10, 3);
+      console.log(result3);
+
+      class Student {
+        getStudentName() {
+          console.log("Hello from my Student Method");
+        }
+
+        getStudentFeeDetails() {}
+        getStudentMarks() {}
+      }
+      let myObj = new Student();
+      myObj.getStudentName();
+    </script>
+
+    <!-- Pascal Case=>every strat with capital letter eg.StudentName  class name should be in the Pascal case and methos or Function in camel case-->
+  </body>
+</html>
